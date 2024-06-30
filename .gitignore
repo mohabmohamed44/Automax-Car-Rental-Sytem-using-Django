@@ -1,0 +1,44 @@
+# Ignore the staticfiles directory created by collectstatic
+/staticfiles/
+
+# Ignore the media directory if you're storing user-uploaded files there
+/media/
+
+# Ignore environment directories
+/env/
+.vscode/
+.venv/
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Django specific files
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Ignore IDE specific directories
+.vscode/
+.idea/
+
+# Ignore node_modules if you use npm or yarn
+node_modules/
+
+# Ignore operating system specific files
+.DS_Store
+Thumbs.db
+
+# Ignore JetBrains IDE project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Ignore Gunicorn socket files
+*.sock
+
+# Add any other directories or files you want to ignore
