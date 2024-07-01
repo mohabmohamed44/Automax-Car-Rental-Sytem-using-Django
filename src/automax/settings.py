@@ -14,7 +14,6 @@ from pathlib import Path
 from django.contrib.messages import constants as messages
 import os
 import environ
-import fcntl
 from distutils.util import strtobool
 env = environ.Env()
 env.read_env()
