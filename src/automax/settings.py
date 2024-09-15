@@ -14,6 +14,7 @@ from pathlib import Path
 from django.contrib.messages import constants as messages
 import os
 import environ
+from dotenv import load_dotenv
 from distutils.util import strtobool
 env = environ.Env()
 env.read_env()
@@ -54,6 +55,11 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Email Backend Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')  # The email you want to send from
+EMAIL_HOST_USER = os.environ.get('SENDGRID_API_KEY')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
